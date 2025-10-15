@@ -31,7 +31,7 @@ export default function App() {
       <Tasklist tasks = {tasks} 
       updateTask = {updateTask}
       deleteTask = {deleteTask}/>
-      <Progresstracker tasks={tasks}/>
+      {tasks.length > 0 && <Progresstracker tasks={tasks} />}
       {tasks.length > 0 && (<button onClick={clearTasks} className='clear-btn'>Clear All Tasks</button>)}
     </div>
   )

@@ -96,18 +96,53 @@ header p {
   background: #ffffff;
 }
 
-.task-list li.completed {
+/* Completed task text becomes strikethrough */
+.task-list li.completed span {
   text-decoration: line-through;
-  opacity: 0.7;
+  color: #777;
 }
 
+.task-list li div:last-child {
+  display: flex;
+  gap: 10px; /* adjust spacing as you like (10–16px looks good) */
+}
+
+/* Default button base style */
 .task-list button {
-  background: none;
-  border: 0;
-  color: #047857;
+  border: none;
   cursor: pointer;
-  padding: 6px 8px;
+  padding: 6px 10px;
+  display: block;
   border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* ✅ Complete button (green) */
+.task-list button.complete-btn {
+  background-color: #22c55e;
+}
+
+.task-list button.complete-btn:hover {
+  background-color: #16a34a;
+}
+
+/* 🔄 Undo button (blue) */
+.task-list button.undo-btn {
+  background-color: #2563eb;
+}
+
+.task-list button.undo-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* ❌ Delete button (red) */
+.task-list button.delete-btn {
+  background-color: #ef4444;
+}
+
+.task-list button.delete-btn:hover {
+  background-color: #dc2626;
 }
 
 .progress-tracker {

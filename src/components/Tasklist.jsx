@@ -6,7 +6,7 @@ export default function TaskList({ tasks, updateTask, deleteTask }) {
   };
 
   return (
-    <div>
+    <div className="task-list">
       <ul>
         {tasks.map((task, index) => (
           <li key={index}>

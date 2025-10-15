@@ -13,7 +13,7 @@ export default function Taskform({addTask}) {
         setCategory("General");
     }
     return (
-        <form onSubmit={handleSubmit} id="task-form">
+        <form onSubmit={handleSubmit}className="task-form">
             <div id="inp">
                 <input type='text' placeholder="Enter the task" value={task}
                     onChange={(e) => setTask(e.target.value)}/>
